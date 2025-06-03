@@ -1,0 +1,14 @@
+aiogram
+aiohttp
+asyncpg
+SQLAlchemy
+alembic
+pydantic
+redis
+python-dotenv
+uvicorn
+langchain_gigachat
+langchain
+langgraph
+redis
+asyncio

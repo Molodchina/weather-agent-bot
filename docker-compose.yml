@@ -1,0 +1,33 @@
+version: "3.8"
+services:
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - monitoring
+    restart: unless-stopped
+
+  bot:
+    container_name: weatherbot_app
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    depends_on:
+      - redis
+    networks:
+      - monitoring
+    volumes:
+      - ./src:/app/src
+    command: ["python3", "src/main.py"]
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  monitoring:
