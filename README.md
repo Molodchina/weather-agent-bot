@@ -9,7 +9,7 @@
 ## 🚀 Запуск бота
 1. **Клонируйте репозиторий**  
    ```bash
-   git clone https://github.com/your-username/telegram-weather-bot.git
+   git clone git@github.com:Molodchina/weather-agent-bot.git
    cd telegram-weather-bot
    ```
 2. **Подготовьте файл окружения**
